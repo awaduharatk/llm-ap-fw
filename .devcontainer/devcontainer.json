@@ -1,0 +1,53 @@
+{
+    "name": "python-app",
+    "dockerComposeFile": "./docker/docker-compose.yml",
+    "service": "python-app",
+    "workspaceFolder": "/workspace",
+    "customizations": {
+        "vscode": {
+            "settings": {
+                "python.defaultInterpreterPath": "/usr/local/bin/python",
+                "editor.formatOnSave": true,
+                "[python]": {
+                    "editor.defaultFormatter": "ms-python.black-formatter",
+                    "editor.codeActionsOnSave": {
+                        "source.organizeImports": "explicit"
+                    }
+                }
+            },
+            "extensions": [
+                // Python
+                "ms-python.python",
+                // Black
+                "ms-python.black-formatter",
+                // Flake8
+                "ms-python.flake8",
+                // isort
+                "ms-python.isort",
+                // Mypy Type Checker
+                "ms-python.mypy-type-checker",
+                // Python Test
+                "littlefoxteam.vscode-python-test-adapter",
+                // Coverage Gutters
+                "ryanluker.vscode-coverage-gutters",
+                // SQL Fluff
+                "dorzey.vscode-sqlfluff",
+                // Auto Docstring
+                "njpwerner.autodocstring",
+                // Indent Raindow
+                "oderwat.indent-rainbow",
+                // Json Formatter
+                "ZainChen.json",
+                // Git Graph
+                "mhutchie.git-graph",
+                // Git Lens
+                "eamodio.gitlens",
+                // Live Share
+                "ms-vsliveshare.vsliveshare",
+                // copilot
+                "github.copilot"
+            ]
+        }
+    },
+    "shutdownAction": "stopCompose"
+}

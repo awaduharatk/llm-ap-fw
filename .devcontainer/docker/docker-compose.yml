@@ -1,0 +1,14 @@
+services:
+  python-app:
+    build:
+      context: ../../
+      dockerfile: ./.devcontainer/docker/Dockerfile
+      args:
+        - PULL_IMAGE=python:3.13
+        - POETRY_VERSION=1.8.4
+    privileged: true
+    volumes:
+      - ../../:/workspace:cached
+    tty: true
+    # env_file:
+    #   - dev.env
